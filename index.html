@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Downloader</title>
+<style>
+  body { font-family: Arial; text-align:center; padding:40px; }
+  input,button{width:90%;padding:12px;margin-top:10px;}
+</style>
+</head>
+<body>
+
+<h2>📥 Instagram & YouTube Downloader</h2>
+
+<input id="url" placeholder="Paste URL here">
+<button onclick="downloadMedia()">Download</button>
+
+<p id="msg"></p>
+
+<script>
+async function downloadMedia() {
+  const url = document.getElementById("url").value;
+  document.getElementById("msg").innerText = "Processing...";
+
+  const res = await fetch("/api/download", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ url })
+  });
+
+  const data = await res.json();
+
+  if (data.error)
+    return document.getElementById("msg").innerText = data.error;
+
+  // Handle Instagram carousels
+  if (data.type === "carousel") {
+    let html = "<b>Multiple files found:</b><br><br>";
+    data.files.forEach((file, index) => {
+      html += `<a href="${file}" download>Download File ${index + 1}</a><br><br>`;
+    });
+    document.getElementById("msg").innerHTML = html;
+    return;
+  }
+
+  // Single image OR single video
+  window.location.href = data.download;
+  document.getElementById("msg").innerText = "Downloading...";
+}
+</script>
+
+</body>
+</html>
