@@ -12,44 +12,7 @@ margin:0;
 font-family:Arial, sans-serif;
 color:#083a66;
 text-align:center;
-background:linear-gradient(180deg,#e6f4ff,#cfe9ff);
-overflow-x:hidden;
-}
-
-/* ocean wave */
-
-.wave{
-position:fixed;
-bottom:0;
-width:200%;
-height:180px;
-background:url("https://i.imgur.com/Za7m6Gm.png");
-background-size:1000px 180px;
-animation:waveMove 12s linear infinite;
-opacity:0.35;
-z-index:-1;
-}
-
-@keyframes waveMove{
-0%{transform:translateX(0);}
-100%{transform:translateX(-500px);}
-}
-
-/* blinking banner */
-
-.banner{
-background:#0a4ea3;
-color:white;
-font-weight:bold;
-font-size:18px;
-padding:10px;
-animation:blink 1.5s infinite;
-}
-
-@keyframes blink{
-0%{opacity:1}
-50%{opacity:0.4}
-100%{opacity:1}
+background:#f4f9ff;
 }
 
 .header{
@@ -82,7 +45,7 @@ background:white;
 padding:22px;
 border-radius:14px;
 margin-bottom:22px;
-box-shadow:0 6px 18px rgba(0,0,0,0.15);
+box-shadow:0 6px 18px rgba(0,0,0,0.12);
 }
 
 h2{
@@ -200,12 +163,6 @@ color:#0a4ea3;
 
 <body>
 
-<div class="wave"></div>
-
-<div class="banner">
-🔥 TODAY'S FRESH CATCH 🔥
-</div>
-
 <div class="header">
 <img src="poster.jpg">
 <div class="brand">नाखवा Seafood</div>
@@ -254,10 +211,25 @@ color:#0a4ea3;
 <div class="card">
 <h2>Today's Fresh Prices</h2>
 
-<div class="price-card"><div class="price-title">Bangda / बांगडा</div><div class="price">₹550</div></div>
-<div class="price-card"><div class="price-title">Bombil / बोंबील</div><div class="price">₹700</div></div>
-<div class="price-card"><div class="price-title">Prawns / कोळंबी</div><div class="price">₹700</div></div>
-<div class="price-card"><div class="price-title">Rawas / रावस</div><div class="price">₹1000</div></div>
+<div class="price-card">
+<div class="price-title">Bangda / बांगडा</div>
+<div class="price">₹550</div>
+</div>
+
+<div class="price-card">
+<div class="price-title">Bombil / बोंबील</div>
+<div class="price">₹700</div>
+</div>
+
+<div class="price-card">
+<div class="price-title">Prawns / कोळंबी</div>
+<div class="price">₹700</div>
+</div>
+
+<div class="price-card">
+<div class="price-title">Rawas / रावस</div>
+<div class="price">₹1000</div>
+</div>
 
 <div class="price-card">
 <div class="price-title">Halwa / हलवा</div>
@@ -284,12 +256,12 @@ color:#0a4ea3;
 <h2>Why Choose Us</h2>
 
 <div class="keypoints">
-Fresh High-Quality Fish<br>
-Cleaned & Cut As Per Requirement<br>
-Premium Packaging To Maintain Freshness<br>
-Transparent & Fair Pricing<br>
-Reliable & On-Time Delivery<br>
-Bulk Orders Accepted
+• Fresh High-Quality Fish •<br>
+• Cleaned & Cut As Per Requirement •<br>
+• Premium Packaging To Maintain Freshness •<br>
+• Transparent & Fair Pricing •<br>
+• Reliable & On-Time Delivery •<br>
+• Bulk Orders Accepted •
 </div>
 
 </div>
@@ -312,8 +284,8 @@ Mumbai • Navi Mumbai • Thane
 
 <div class="instagram">
 
-<svg width="22" height="22" viewBox="0 0 24 24" fill="#0a4ea3">
-<path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#0a4ea3" viewBox="0 0 24 24">
+<path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm4.25 5.5a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5zm0 1.75a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.88-.88a1.13 1.13 0 1 0 0 2.25 1.13 1.13 0 0 0 0-2.25z"/>
 </svg>
 
 <a href="https://instagram.com/nakhwa_seafood" target="_blank">@nakhwa_seafood</a>
