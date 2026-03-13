@@ -15,6 +15,33 @@ text-align:center;
 background:#f4f9ff;
 }
 
+/* NAVBAR */
+
+.navbar{
+background:#0a4ea3;
+color:white;
+padding:14px;
+position:sticky;
+top:0;
+z-index:1000;
+display:flex;
+justify-content:center;
+gap:35px;
+font-weight:bold;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+.navbar a:hover{
+text-decoration:underline;
+}
+
+/* HEADER */
+
 .header{
 padding:25px;
 background:white;
@@ -22,13 +49,13 @@ box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
 .header img{
-height:130px;
+height:120px;
 display:block;
 margin:auto;
 }
 
 .brand{
-font-size:38px;
+font-size:36px;
 font-weight:bold;
 color:#0a4ea3;
 margin-top:10px;
@@ -52,6 +79,8 @@ h2{
 color:#0a4ea3;
 margin-top:0;
 }
+
+/* video */
 
 .video-scroll{
 display:flex;
@@ -80,6 +109,8 @@ font-size:14px;
 color:#0a4ea3;
 }
 
+/* price */
+
 .price-card{
 background:#f3f9ff;
 border-radius:10px;
@@ -100,11 +131,28 @@ margin-top:5px;
 font-weight:bold;
 }
 
+/* marination highlight */
+
+.marination{
+background:#ffe8a3;
+border:2px dashed #ff9800;
+padding:18px;
+border-radius:12px;
+font-size:20px;
+font-weight:bold;
+color:#5a3d00;
+margin-top:15px;
+}
+
+/* keypoints */
+
 .keypoints{
 font-size:17px;
 font-weight:bold;
 line-height:2;
 }
+
+/* delivery */
 
 .delivery{
 background:#0a4ea3;
@@ -115,6 +163,8 @@ display:inline-block;
 font-weight:bold;
 }
 
+/* contact */
+
 .contact{
 font-size:20px;
 font-weight:bold;
@@ -124,6 +174,8 @@ font-weight:bold;
 color:#0a4ea3;
 text-decoration:none;
 }
+
+/* instagram */
 
 .instagram{
 display:flex;
@@ -138,6 +190,8 @@ text-decoration:none;
 color:#0a4ea3;
 font-weight:bold;
 }
+
+/* order button */
 
 .order-btn{
 position:fixed;
@@ -163,6 +217,14 @@ color:#0a4ea3;
 
 <body>
 
+<!-- NAVBAR -->
+
+<div class="navbar">
+<a href="#prices">Prices</a>
+<a href="#about">About Us</a>
+<a href="#contact">Contact Us</a>
+</div>
+
 <div class="header">
 <img src="poster.jpg">
 <div class="brand">नाखवा Seafood</div>
@@ -176,65 +238,45 @@ color:#0a4ea3;
 <div class="video-scroll">
 
 <div class="video-card">
-<video controls poster="pomfret.jpeg"><source src="pomfret.mp4"></video>
+<video controls poster="pomfret.jpg"><source src="pomfret.mp4"></video>
 <div class="video-title">Pomfret / पापलेट</div>
 </div>
 
 <div class="video-card">
-<video controls poster="halwa.jpeg"><source src="halwa.mp4"></video>
+<video controls poster="halwa.jpg"><source src="halwa.mp4"></video>
 <div class="video-title">Halwa / हलवा</div>
 </div>
 
 <div class="video-card">
-<video controls poster="prawns.jpeg"><source src="prawns.mp4"></video>
+<video controls poster="prawns.jpg"><source src="prawns.mp4"></video>
 <div class="video-title">Prawns / कोळंबी</div>
 </div>
 
 <div class="video-card">
-<video controls poster="bombil.jpeg"><source src="bombil.mp4"></video>
+<video controls poster="bombil.jpg"><source src="bombil.mp4"></video>
 <div class="video-title">Bombil / बोंबील</div>
 </div>
 
 <div class="video-card">
-<video controls poster="bangda.jpeg"><source src="bangda.mp4"></video>
+<video controls poster="bangda.jpg"><source src="bangda.mp4"></video>
 <div class="video-title">Bangda / बांगडा</div>
 </div>
 
 <div class="video-card">
-<video controls poster="surmai.jpeg"><source src="surmai.mp4"></video>
+<video controls poster="surmai.jpg"><source src="surmai.mp4"></video>
 <div class="video-title">Surmai / सुरमई</div>
 </div>
 
-  <div class="video-card">
-<video controls poster="mudcrab.jpeg"><source src="mudcrab.mp4"></video>
-<div class="video-title">Mud Crab / खेकडे</div>
-</div>
-
 </div>
 </div>
 
-<div class="card">
+<div class="card" id="prices">
 <h2>Today's Fresh Prices</h2>
 
-<div class="price-card">
-<div class="price-title">Bangda / बांगडा</div>
-<div class="price">₹550</div>
-</div>
-
-<div class="price-card">
-<div class="price-title">Bombil / बोंबील</div>
-<div class="price">₹700</div>
-</div>
-
-<div class="price-card">
-<div class="price-title">Prawns / कोळंबी</div>
-<div class="price">₹700</div>
-</div>
-
-<div class="price-card">
-<div class="price-title">Rawas / रावस</div>
-<div class="price">₹1000</div>
-</div>
+<div class="price-card"><div class="price-title">Bangda / बांगडा</div><div class="price">₹550</div></div>
+<div class="price-card"><div class="price-title">Bombil / बोंबील</div><div class="price">₹700</div></div>
+<div class="price-card"><div class="price-title">Prawns / कोळंबी</div><div class="price">₹700</div></div>
+<div class="price-card"><div class="price-title">Rawas / रावस</div><div class="price">₹1000</div></div>
 
 <div class="price-card">
 <div class="price-title">Halwa / हलवा</div>
@@ -255,9 +297,17 @@ color:#0a4ea3;
 <div class="price">Large ₹2000 (2-3 pcs)</div>
 </div>
 
+<!-- HIGHLIGHT -->
+
+<div class="marination">
+⭐ Marination Charges ⭐ <br>
+Half Kg – ₹100 <br>
+1 Kg – ₹150
 </div>
 
-<div class="card">
+</div>
+
+<div class="card" id="about">
 <h2>Why Choose Us</h2>
 
 <div class="keypoints">
@@ -280,7 +330,7 @@ Mumbai • Navi Mumbai • Thane
 
 </div>
 
-<div class="card">
+<div class="card" id="contact">
 <h2>Contact</h2>
 
 <div class="contact">
@@ -290,7 +340,7 @@ Mumbai • Navi Mumbai • Thane
 <div class="instagram">
 
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#0a4ea3" viewBox="0 0 24 24">
-<path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm4.25 5.5a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5zm0 1.75a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.88-.88a1.13 1.13 0 1 0 0 2.25 1.13 1.13 0 0 0 0-2.25z"/>
+<path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm4.25 5.5a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5zm4.88-.88a1.13 1.13 0 1 0 0 2.25 1.13 1.13 0 0 0 0-2.25z"/>
 </svg>
 
 <a href="https://instagram.com/nakhwa_seafood" target="_blank">@nakhwa_seafood</a>
