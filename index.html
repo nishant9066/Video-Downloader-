@@ -16,7 +16,7 @@ background:linear-gradient(180deg,#e6f4ff,#cfe9ff);
 overflow-x:hidden;
 }
 
-/* Ocean wave animation */
+/* ocean wave */
 
 .wave{
 position:fixed;
@@ -35,8 +35,25 @@ z-index:-1;
 100%{transform:translateX(-500px);}
 }
 
+/* blinking banner */
+
+.banner{
+background:#0a4ea3;
+color:white;
+font-weight:bold;
+font-size:18px;
+padding:10px;
+animation:blink 1.5s infinite;
+}
+
+@keyframes blink{
+0%{opacity:1}
+50%{opacity:0.4}
+100%{opacity:1}
+}
+
 .header{
-padding:25px 15px;
+padding:25px;
 background:white;
 box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
@@ -48,7 +65,7 @@ margin:auto;
 }
 
 .brand{
-font-size:36px;
+font-size:38px;
 font-weight:bold;
 color:#0a4ea3;
 margin-top:10px;
@@ -86,11 +103,6 @@ background:#f3f9ff;
 border-radius:12px;
 padding:10px;
 box-shadow:0 4px 12px rgba(0,0,0,0.12);
-transition:transform .2s;
-}
-
-.video-card:hover{
-transform:scale(1.05);
 }
 
 .video-card video{
@@ -105,11 +117,30 @@ font-size:14px;
 color:#0a4ea3;
 }
 
-ul{
-list-style:none;
-padding:0;
+.price-card{
+background:#f3f9ff;
+border-radius:10px;
+padding:15px;
+margin:10px 0;
+box-shadow:0 3px 10px rgba(0,0,0,0.12);
+}
+
+.price-title{
+font-size:18px;
+font-weight:bold;
+color:#0a4ea3;
+}
+
+.price{
+font-size:17px;
+margin-top:5px;
+font-weight:bold;
+}
+
+.keypoints{
+font-size:17px;
+font-weight:bold;
 line-height:2;
-font-size:16px;
 }
 
 .delivery{
@@ -137,7 +168,6 @@ justify-content:center;
 align-items:center;
 gap:8px;
 margin-top:10px;
-font-size:16px;
 }
 
 .instagram a{
@@ -172,6 +202,10 @@ color:#0a4ea3;
 
 <div class="wave"></div>
 
+<div class="banner">
+🔥 TODAY'S FRESH CATCH 🔥
+</div>
+
 <div class="header">
 <img src="poster.jpg">
 <div class="brand">नाखवा Seafood</div>
@@ -186,59 +220,87 @@ color:#0a4ea3;
 
 <div class="video-card">
 <video controls poster="pomfret.jpg"><source src="pomfret.mp4"></video>
-<div class="video-title">Fresh Pomfret / पापलेट</div>
+<div class="video-title">Pomfret / पापलेट</div>
 </div>
 
 <div class="video-card">
 <video controls poster="halwa.jpg"><source src="halwa.mp4"></video>
-<div class="video-title">Fresh Halwa / हलवा</div>
+<div class="video-title">Halwa / हलवा</div>
 </div>
 
 <div class="video-card">
 <video controls poster="prawns.jpg"><source src="prawns.mp4"></video>
-<div class="video-title">Fresh Prawns Medium Size</div>
+<div class="video-title">Prawns / कोळंबी</div>
 </div>
 
 <div class="video-card">
 <video controls poster="bombil.jpg"><source src="bombil.mp4"></video>
-<div class="video-title">Fresh Bombil</div>
+<div class="video-title">Bombil / बोंबील</div>
 </div>
 
 <div class="video-card">
 <video controls poster="bangda.jpg"><source src="bangda.mp4"></video>
-<div class="video-title">Fresh Bangda</div>
+<div class="video-title">Bangda / बांगडा</div>
 </div>
 
 <div class="video-card">
 <video controls poster="surmai.jpg"><source src="surmai.mp4"></video>
-<div class="video-title">Fresh Surmai</div>
-</div>
-
-<div class="video-card">
-<video controls poster="mudcrab.jpg"><source src="mudcrab.mp4"></video>
-<div class="video-title">Mud Crabs</div>
+<div class="video-title">Surmai / सुरमई</div>
 </div>
 
 </div>
 </div>
 
 <div class="card">
-<h2>Why Choose Us?</h2>
-<ul>
-<li>Fresh, high-quality fish</li>
-<li>Cleaned and cut as per your requirement</li>
-<li>High-quality packaging to maintain freshness</li>
-<li>Reasonable and transparent pricing</li>
-<li>On-time and reliable service</li>
-<li>Bulk orders accepted</li>
-</ul>
+<h2>Today's Fresh Prices</h2>
+
+<div class="price-card"><div class="price-title">Bangda / बांगडा</div><div class="price">₹550</div></div>
+<div class="price-card"><div class="price-title">Bombil / बोंबील</div><div class="price">₹700</div></div>
+<div class="price-card"><div class="price-title">Prawns / कोळंबी</div><div class="price">₹700</div></div>
+<div class="price-card"><div class="price-title">Rawas / रावस</div><div class="price">₹1000</div></div>
+
+<div class="price-card">
+<div class="price-title">Halwa / हलवा</div>
+<div class="price">₹1000</div>
+<div class="price">Jumbo Size ₹1200</div>
+</div>
+
+<div class="price-card">
+<div class="price-title">Surmai / सुरमई</div>
+<div class="price">Medium ₹1500</div>
+<div class="price">Large ₹1850</div>
+</div>
+
+<div class="price-card">
+<div class="price-title">Pomfret / पापलेट</div>
+<div class="price">Small ₹1500 (6-7 pcs)</div>
+<div class="price">Medium ₹1750 (4-5 pcs)</div>
+<div class="price">Large ₹2000 (2-3 pcs)</div>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Why Choose Us</h2>
+
+<div class="keypoints">
+Fresh High-Quality Fish<br>
+Cleaned & Cut As Per Requirement<br>
+Premium Packaging To Maintain Freshness<br>
+Transparent & Fair Pricing<br>
+Reliable & On-Time Delivery<br>
+Bulk Orders Accepted
+</div>
+
 </div>
 
 <div class="card">
 <h2>Delivery Area</h2>
+
 <div class="delivery">
 Mumbai • Navi Mumbai • Thane
 </div>
+
 </div>
 
 <div class="card">
@@ -251,7 +313,7 @@ Mumbai • Navi Mumbai • Thane
 <div class="instagram">
 
 <svg width="22" height="22" viewBox="0 0 24 24" fill="#0a4ea3">
-<path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6.5-.8a1.3 1.3 0 11-2.6 0 1.3 1.3 0 012.6 0zM12 9a3 3 0 100 6 3 3 0 000-6z"/>
+<path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7z"/>
 </svg>
 
 <a href="https://instagram.com/nakhwa_seafood" target="_blank">@nakhwa_seafood</a>
@@ -262,8 +324,7 @@ Mumbai • Navi Mumbai • Thane
 
 </div>
 
-<a class="order-btn"
-href="https://wa.me/917738866067?text=Hello%20I%20want%20to%20order%20fresh%20fish%20from%20Nakhwa%20Seafood">
+<a class="order-btn" href="https://wa.me/917738866067?text=Hello%20I%20want%20to%20order%20fresh%20fish%20from%20Nakhwa%20Seafood">
 Order Now
 </a>
 
