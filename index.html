@@ -9,9 +9,9 @@
 
 body{
 margin:0;
-font-family:system-ui, Arial;
-background:#0b1f26;
-color:white;
+font-family:Arial, Helvetica, sans-serif;
+background:#eaf6ff;
+color:#0b3d66;
 }
 
 .hero{
@@ -20,79 +20,87 @@ display:block;
 }
 
 .container{
-max-width:900px;
+max-width:750px;
 margin:auto;
-padding:20px;
+padding:15px;
 }
 
 .card{
-background:#132e36;
-padding:22px;
+background:white;
+padding:18px;
 border-radius:12px;
-margin-bottom:20px;
-box-shadow:0 8px 25px rgba(0,0,0,0.4);
+margin-bottom:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
 
 h2{
-margin-top:0;
+margin:0 0 10px 0;
+color:#0a4ea3;
+font-size:20px;
 }
 
 ul{
-line-height:1.9;
+margin:0;
 padding-left:18px;
+line-height:1.7;
+font-size:15px;
 }
 
 .delivery{
-background:#1d4550;
-padding:14px;
+background:#0a4ea3;
+color:white;
+padding:10px;
 border-radius:8px;
-font-weight:bold;
+font-size:14px;
 text-align:center;
+font-weight:bold;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:12px;
-margin-top:10px;
+gap:8px;
+margin-top:8px;
 }
 
 .gallery img,
 .gallery video{
 width:100%;
-border-radius:10px;
+border-radius:8px;
 }
 
 .contact{
 text-align:center;
 font-size:22px;
 font-weight:bold;
+color:#0a4ea3;
 }
 
 .instagram{
 text-align:center;
-margin-top:10px;
-opacity:0.9;
+margin-top:5px;
+font-size:15px;
 }
 
 .whatsapp{
 position:fixed;
-bottom:20px;
-right:20px;
+bottom:18px;
+right:18px;
 background:#25D366;
 color:white;
-padding:14px 22px;
-border-radius:40px;
+padding:12px 18px;
+border-radius:30px;
 text-decoration:none;
+font-size:14px;
 font-weight:bold;
-box-shadow:0 10px 20px rgba(0,0,0,0.5);
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 footer{
 text-align:center;
-padding:20px;
-font-size:13px;
-opacity:0.7;
+padding:12px;
+font-size:12px;
+color:#0a4ea3;
 }
 
 @media(max-width:600px){
@@ -117,6 +125,7 @@ font-size:20px;
 <div class="container">
 
 <div class="card">
+
 <h2>Why Choose Us?</h2>
 
 <ul>
@@ -125,7 +134,7 @@ font-size:20px;
 <li>High-quality packaging to maintain freshness</li>
 <li>Reasonable and transparent pricing</li>
 <li>On-time and reliable service</li>
-<li>We accept bulk orders too</li>
+<li>Bulk orders accepted</li>
 </ul>
 
 </div>
@@ -135,7 +144,7 @@ font-size:20px;
 <h2>Delivery Area</h2>
 
 <div class="delivery">
-Delivery available in Mumbai | Navi Mumbai | Thane
+Mumbai • Navi Mumbai • Thane
 </div>
 
 </div>
@@ -147,7 +156,6 @@ Delivery available in Mumbai | Navi Mumbai | Thane
 <div class="gallery">
 
 <img src="fish1.jpg">
-
 <img src="fish2.jpg">
 
 <video controls>
@@ -180,7 +188,7 @@ Instagram: @nakhwa_seafood
 
 <a class="whatsapp"
 href="https://wa.me/917738866067?text=Hello%20I%20want%20to%20order%20fresh%20fish%20from%20Nakhwa%20Seafood">
-Order on WhatsApp
+WhatsApp Order
 </a>
 
 <footer>
