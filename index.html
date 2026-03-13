@@ -15,27 +15,27 @@ color:#083a66;
 }
 
 .header{
-display:flex;
-align-items:center;
-gap:15px;
-padding:15px 20px;
+text-align:center;
+padding:20px;
 background:white;
 box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
 .header img{
-height:90px;
-border-radius:6px;
+height:110px;
+display:block;
+margin:auto;
 }
 
 .brand{
-font-size:30px;
+font-size:34px;
 font-weight:bold;
 color:#0a4ea3;
+margin-top:8px;
 }
 
 .container{
-max-width:850px;
+max-width:900px;
 margin:auto;
 padding:18px;
 }
@@ -43,8 +43,8 @@ padding:18px;
 .card{
 background:white;
 padding:18px;
-border-radius:10px;
-margin-bottom:18px;
+border-radius:12px;
+margin-bottom:20px;
 box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
 
@@ -53,17 +53,28 @@ margin-top:0;
 color:#0a4ea3;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
+.video-scroll{
+display:flex;
+gap:15px;
+overflow-x:auto;
+padding-bottom:10px;
+}
+
+.video-scroll::-webkit-scrollbar{
+height:6px;
+}
+
+.video-scroll::-webkit-scrollbar-thumb{
+background:#0a4ea3;
+border-radius:5px;
 }
 
 .video-card{
+min-width:220px;
 background:#f3f9ff;
-padding:8px;
-border-radius:8px;
-text-align:center;
+border-radius:10px;
+padding:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 .video-card video{
@@ -75,20 +86,20 @@ border-radius:8px;
 margin-top:6px;
 font-size:14px;
 font-weight:bold;
+text-align:center;
 color:#0a4ea3;
 }
 
 ul{
 line-height:1.7;
 padding-left:18px;
-font-size:15px;
 }
 
 .delivery{
 background:#0a4ea3;
 color:white;
-padding:10px;
-border-radius:6px;
+padding:12px;
+border-radius:8px;
 text-align:center;
 font-weight:bold;
 }
@@ -106,7 +117,7 @@ text-decoration:none;
 
 .instagram{
 text-align:center;
-margin-top:8px;
+margin-top:10px;
 font-size:16px;
 }
 
@@ -122,7 +133,7 @@ bottom:20px;
 right:20px;
 background:#0a4ea3;
 color:white;
-padding:13px 22px;
+padding:14px 24px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
@@ -134,22 +145,6 @@ text-align:center;
 padding:15px;
 font-size:12px;
 color:#0a4ea3;
-}
-
-@media(max-width:600px){
-
-.gallery{
-grid-template-columns:1fr;
-}
-
-.brand{
-font-size:24px;
-}
-
-.header img{
-height:75px;
-}
-
 }
 
 </style>
@@ -169,7 +164,7 @@ height:75px;
 
 <h2>Fresh Catch Videos</h2>
 
-<div class="gallery">
+<div class="video-scroll">
 
 <div class="video-card">
 <video controls><source src="pomfret.mp4"></video>
