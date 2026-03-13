@@ -1,54 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video Downloader</title>
+<title>नाखवा Seafood</title>
+
 <style>
-  body { font-family: Arial; text-align:center; padding:40px; }
-  input,button{width:90%;padding:12px;margin-top:10px;}
+
+body{
+margin:0;
+font-family:system-ui, Arial;
+background:#0b1f26;
+color:white;
+}
+
+.hero{
+width:100%;
+display:block;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:#132e36;
+padding:22px;
+border-radius:12px;
+margin-bottom:20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+}
+
+h2{
+margin-top:0;
+}
+
+ul{
+line-height:1.9;
+padding-left:18px;
+}
+
+.delivery{
+background:#1d4550;
+padding:14px;
+border-radius:8px;
+font-weight:bold;
+text-align:center;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:10px;
+}
+
+.gallery img,
+.gallery video{
+width:100%;
+border-radius:10px;
+}
+
+.contact{
+text-align:center;
+font-size:22px;
+font-weight:bold;
+}
+
+.instagram{
+text-align:center;
+margin-top:10px;
+opacity:0.9;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 22px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
+
+footer{
+text-align:center;
+padding:20px;
+font-size:13px;
+opacity:0.7;
+}
+
+@media(max-width:600px){
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.contact{
+font-size:20px;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
-<h2>📥 Instagram & YouTube Downloader</h2>
+<img src="poster.jpg" class="hero">
 
-<input id="url" placeholder="Paste URL here">
-<button onclick="downloadMedia()">Download</button>
+<div class="container">
 
-<p id="msg"></p>
+<div class="card">
+<h2>Why Choose Us?</h2>
 
-<script>
-async function downloadMedia() {
-  const url = document.getElementById("url").value;
-  document.getElementById("msg").innerText = "Processing...";
+<ul>
+<li>Fresh, high-quality fish</li>
+<li>Cleaned and cut as per your requirement</li>
+<li>High-quality packaging to maintain freshness</li>
+<li>Reasonable and transparent pricing</li>
+<li>On-time and reliable service</li>
+<li>We accept bulk orders too</li>
+</ul>
 
-  const res = await fetch("download", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({ url })
-  });
+</div>
 
-  const data = await res.json();
+<div class="card">
 
-  if (data.error)
-    return document.getElementById("msg").innerText = data.error;
+<h2>Delivery Area</h2>
 
-  // Handle Instagram carousels
-  if (data.type === "carousel") {
-    let html = "<b>Multiple files found:</b><br><br>";
-    data.files.forEach((file, index) => {
-      html += `<a href="${file}" download>Download File ${index + 1}</a><br><br>`;
-    });
-    document.getElementById("msg").innerHTML = html;
-    return;
-  }
+<div class="delivery">
+Delivery available in Mumbai | Navi Mumbai | Thane
+</div>
 
-  // Single image OR single video
-  window.location.href = data.download;
-  document.getElementById("msg").innerText = "Downloading...";
-}
-</script>
+</div>
+
+<div class="card">
+
+<h2>Fresh Catch Gallery</h2>
+
+<div class="gallery">
+
+<img src="fish1.jpg">
+
+<img src="fish2.jpg">
+
+<video controls>
+<source src="fishvideo1.mp4">
+</video>
+
+<video controls>
+<source src="fishvideo2.mp4">
+</video>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Order Now</h2>
+
+<div class="contact">
+📞 7738866067
+</div>
+
+<div class="instagram">
+Instagram: @nakhwa_seafood
+</div>
+
+</div>
+
+</div>
+
+<a class="whatsapp"
+href="https://wa.me/917738866067?text=Hello%20I%20want%20to%20order%20fresh%20fish%20from%20Nakhwa%20Seafood">
+Order on WhatsApp
+</a>
+
+<footer>
+© नाखवा Seafood • Real Taste of Freshness
+</footer>
 
 </body>
 </html>
